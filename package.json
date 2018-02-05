@@ -1,7 +1,9 @@
 {
   "name": "tidy-repo",
   "version": "0.0.0",
-  "main": "index.js",
+  "bin": {
+    "repo": "index.js"
+  },
   "scripts": {
     "lint": "standard"
   },
