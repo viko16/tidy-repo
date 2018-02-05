@@ -4,6 +4,8 @@ const sade = require('sade')
 
 const prog = sade('repo')
 const pkg = require('./package.json')
+const { initConfig } = require('./lib/config')
+const { addRepo } = require('./lib/add')
 
 prog
   .version(pkg.version)
@@ -13,6 +15,9 @@ prog
   .describe('Initial config files. (~/.tidy-repo/config.js)')
   .action(() => {
     console.log('run init')
+    initConfig()
+      .then(_ => console.log('done'))
+      .catch(err => console.error(err))
   })
 
 prog
@@ -22,6 +27,9 @@ prog
   .example('add git@github.com:vuejs/vue.git')
   .action(url => {
     console.log('run add', url)
+    addRepo(url)
+      .then(_ => console.log('done'))
+      .catch(err => console.error(err))
   })
 
 prog
