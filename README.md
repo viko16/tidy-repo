@@ -1,12 +1,10 @@
 # tidy-repo
 
-> 👷🏼 Better `git clone`. Keep repository directory neat and tidy.
+> 👷 Better `git clone`. Keep repository directory neat and tidy.
 
 - **Easy:** You can run `add` command anywhere
 - **Agile:** Just writing simple rules once
 - **Functional:** Provide hooks for easy extension
-
-
 
 
 ## Installation
@@ -16,7 +14,6 @@ Requires **node v7.6.0** or higher for ES2015 and async function support.
 ``` sh
 $ npm i tidy-repo --global
 ```
-
 
 
 ## Usage
@@ -47,7 +44,6 @@ $ repo
 ```
 
 
-
 ## Config
 
 ``` sh
@@ -60,11 +56,14 @@ Example:
 ```json
 {
   "hostMap": {
+    "remote url host": "local directory path",
+
     "github.com": "~/Code/github",
     "gitlab.com": "~/Code/gitlab"
   }
 }
 ```
+
 
 ## Lifecycle
 
@@ -88,7 +87,7 @@ console.log('hello', process.env.TIDY_REPO_TARGETPATH);
 
 You can get some variable in `process.env`.
 
-Available envionment variables:
+Available environment variables:
 
 | ` process.env`         | description                                      |
 | ---------------------- | ------------------------------------------------ |
