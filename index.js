@@ -13,7 +13,7 @@ prog
 
 prog
   .command('init')
-  .describe('Initial config files. (~/.tidy-repo/config.js)')
+  .describe(`Initial config files. (Location: ${process.env.HOME}/.tidy-repo/config.json)`)
   .action(() => {
     initConfig().catch(logger.error)
   })
@@ -33,6 +33,12 @@ prog
   .example('import ~/Code')
   .action(from => {
     console.log('run import', from)
+    logger.error('WIP')
   })
+
+prog
+  .command('help', '', { default: true })
+  .describe('Show help message.')
+  .action(() => prog.help())
 
 prog.parse(process.argv)
