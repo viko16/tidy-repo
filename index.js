@@ -10,6 +10,7 @@ const { logger } = require('./lib/utils')
 
 prog
   .version(pkg.version)
+  .describe('Better git clone. Keep repository directory neat and tidy.')
 
 prog
   .command('init')
