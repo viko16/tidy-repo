@@ -12,7 +12,7 @@
     "release": "npm run lint && standard-version"
   },
   "devDependencies": {
-    "standard": "^10",
+    "standard": "^14.3.3",
     "standard-version": "^7.1.0"
   },
   "dependencies": {
