@@ -1,6 +1,6 @@
 {
   "name": "tidy-repo",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Better git clone. Keep repository directory neat and tidy.",
   "license": "MIT",
   "repository": "viko16/tidy-repo",
